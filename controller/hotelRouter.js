@@ -20,5 +20,9 @@ route.get("/view",async(req,res)=>{
     res.json(data)
 })
 
-
+route.posts("/search",async(req,res)=>{
+    let input=req.body
+    let data=await hotelModel.find(input)
+    req,express.json(data)
+})
 module.exports=route
