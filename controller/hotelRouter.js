@@ -15,4 +15,9 @@ route.post("/add",async(req,res)=>{
     
 })
 
+route.get("/view",async(req,res)=>{
+    let data=await hotelModel.find()
+    res.json(data)
+})
+
 module.exports=route
